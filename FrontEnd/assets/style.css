@@ -186,3 +186,36 @@ footer nav ul {
 	margin: 2em
 }
 
+/*** Les buttons des categories***/
+
+#categories-filter {
+	
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+/** style des bouttons **/
+.filter{
+	border-radius: 60px;
+	align-items: center;
+	padding: 9px 16px;
+	background-color: #fff;
+	border: 1px solid #1D6154;
+	color: #1D6154;
+	font-family: Syne;
+	font-size: 16px;
+	flex-shrink:0;
+}
+.filter.active{
+	background: #1D6154;
+	color: #fff;
+}
+/***Page LogIN****/
+h2.title-logIn{
+text-align: center;
+margin-top: 150px;
+
+}
