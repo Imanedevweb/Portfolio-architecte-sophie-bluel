@@ -8,16 +8,33 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+	<script src="https://kit.fontawesome.com/3c74274841.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
+<section id="la modale">
+	<h1 class= titre-Madale>Galerie photo</h1>
+	<div class="gallery">
+		<!-- générer dynamiquement avec JS-->
+
+	</div>
+	<input type="submit" value="Ajouter une photo" id="btn modal">
+</section>
+
+<aside id="homepageEdit">
+	<div class="Icon-Edit">
+		<i class="fa-regular fa-pen-to-square"></i>
+		<p class="Edit">mode d'édition</p>
+	</div>
+</aside>
 <body>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
+			<li><a href="index.html">projets</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="login.html" id="loginBtn">login</a></li>
+			<li><a href="login.html" id="logoutBtn">logout</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -35,8 +52,16 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="Icon-Edit">
+			<h2>Mes projets</h2>
+			<a href="#">	
+				<i class="fa-regular fa-pen-to-square"></i>
+				<p class="Edit">mode d'édition</p>
+			</a>
+		</div>
 		<div id="categories-filter">
+			<div class="filter buttons"></div>
+		</div>
 			<!--gérer avec JS-->
 		</div>
 		<div class="gallery">
@@ -67,5 +92,8 @@
 	</nav>
 </footer>
 <script src="./assets/javascript/works.js"></script>
+<script src="./assets/javascript/users.js"></script>
+<script src="./assets/javascript/script.js"></script>
+
 </body>
 </html>

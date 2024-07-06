@@ -9,22 +9,38 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	
 </head>
 <body>
     <header>
-	    <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-	    <nav>
+		<a class="logIn" href="index.html">
+	 	   <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+		</a>   
+		<nav>
 		    <ul>
-			    <li>projets</li>
+			    <li><a href="index.html">projets</a></li>
 			    <li>contact</li>
-			    <li>login</li>
+			    <li><a href="login.html" class="active logBtn">login</a></li>
 			    <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		    </ul>
 	    </nav>
     </header>
+	
     <main>
-        <section></section>
-        <h2 class="title-logIn">Log In</h2>
+		<h2 class="title-logIn">Log In</h2> 
+		<section id="connexion">
+			<form id="logIn" >
+				<label for="email">E-mail</label>
+				<input type="email" name="email" id="email">
+				<label for="password">Mot de passe</label>
+				<input type="password" name="password" id="password">
+				<input type="submit" value="Se connecter" id="logInBtn">
+				<p id="error-message">Email ou mot de passe incorrect.</p>
+			</form>
+
+				<p class="ErrorLogIn">Mot de passe oublié</p>
+		</section>
+    
         
     </main>
     <footer>
@@ -34,6 +50,7 @@
 		    </ul>
 	    </nav>
     </footer>
-<script src="./assets/javascript/works.js"></script>
+<script src="./assets/javascript/users.js"></script>	
+<script src="./assets/javascript/login.js"></script>
 </body>
 </html>
