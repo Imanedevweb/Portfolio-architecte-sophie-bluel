@@ -1,3 +1,4 @@
+
 // Sélection des éléments du tableau de connexion
 const form = document.getElementById('logIn');
 const email = document.getElementById('email');

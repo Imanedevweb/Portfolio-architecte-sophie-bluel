@@ -3,7 +3,7 @@ const headertop = document.getElementById ('homepageEdit');
 const loginBtn = document.getElementById('loginBtn');
 const logoutBtn = document.getElementById ('logoutBtn');
 const categorysBtn = document.getElementById('categories-filter');
-const iconEdit = document.querySelector ('.Icon-Edit a')
+const iconEdit = document.querySelector ('#Icon-Edit')
 
 // Fonction pour récupérer les identifiants
 const getUserCredentials = () => {
