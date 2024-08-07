@@ -3,7 +3,7 @@
 const form = document.getElementById('logIn');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const erreurMsg = document.getElementById('erreur-message');
+const erreurMsg = document.getElementById('error-message');
 
 
 // Ajout de l'écouteur d'événement pour le formulaire
