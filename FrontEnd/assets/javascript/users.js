@@ -75,6 +75,7 @@ async function login() {
 } catch (error) {
     console.log("erreur", error);
     erreurMsg.textContent = "Connexion échouée. Veuillez vérifier vos identifiants.";
+    erreurMsg.style.display = "block";
 }
 }
 
