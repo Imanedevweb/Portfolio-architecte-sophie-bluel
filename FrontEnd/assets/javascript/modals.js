@@ -24,6 +24,7 @@ buttonClose.forEach(btn => {
     btn.onclick = function () {
         modal.close();
         modalcreer.close();
+        resetForm();
     }
 });
 
@@ -37,22 +38,24 @@ addphotoBtn.onclick = function () {
 buttonBack.onclick = function () {
     modalcreer.close();
     modal.showModal();
+    resetForm();;
 }
 // Fermer la Modale en cliquant en dehors de celle-ci et sur ESC.
 window.addEventListener("click", function (event) {
-    if (event.target === modal) {
+    if (event.target === modal)
         modal.close();
-    }
-});
-window.addEventListener("click", function (event) {
     if (event.target === modalcreer) {
         modalcreer.close();
+        resetForm();
     }
+
 });
+
 window.addEventListener('keydown', (event) => {
     if (event.key === "Escape") {
         modal.close();
         modalcreer.close();
+        resetForm();
     }
 });
 
@@ -67,11 +70,11 @@ function displayProjectsModal(work) {
 
 
     const imgWorkModal = document.createElement("img");
-    const btnDelete = document.createElement("button");
-    const IconDelete = document.createElement("i");
-
     imgWorkModal.src = work.imageUrl;
     imgWorkModal.alt = work.title;
+
+    const btnDelete = document.createElement("button");
+    const IconDelete = document.createElement("i");
 
     // Rajout du bouton de suppression avec l'icône
     IconDelete.classList.add("fa-solid", "fa-trash-can")
@@ -91,7 +94,7 @@ function displayProjectsModal(work) {
         }
     };
 
-    figureWorkModal.appendChild(imgWorkModal);
+    figureWorkModal.appendChild(imgWorkModal, btnDelete);
     figureWorkModal.appendChild(btnDelete);
     divGalleryModal.appendChild(figureWorkModal);
 };
@@ -156,6 +159,15 @@ document.getElementById("file").addEventListener("change", function () {
     }
 }
 );
+function resetForm() {
+    document.getElementById("previewImage").style.display = "none";
+    document.querySelector('.fa-image').classList.remove('hidden');
+    document.querySelector('.labelFile').classList.remove('hidden');
+    document.querySelector('.containerAddPhoto p').classList.remove("hidden");
+    document.getElementById("title").value = "";
+    document.getElementById("categoryInput").selectedIndex = 0;
+
+}
 
 // Fonction pour charger les catégories depuis l'API et les afficher dans le sélecteur
 async function SelectCategories() {
@@ -221,6 +233,7 @@ formAddWork.addEventListener('submit', async function (event) {
         console.error('Erreur:', error);
     }
 });
+
 // Vérifie l'état du bouton de soumission en fonction de la complétude du formulaire
 document.addEventListener("DOMContentLoaded", () => {
     const titleInput = document.getElementById("title");
